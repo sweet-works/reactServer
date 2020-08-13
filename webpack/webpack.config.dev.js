@@ -4,7 +4,7 @@ const config = {
         app: path.join(__dirname, '../client/app.js')
     },
     output: {
-        filename: '[name].[hash].js',
+        filename: '[name].[chunkHash:5].js',
         path: path.join(__dirname, '../build'),
     },
 }
