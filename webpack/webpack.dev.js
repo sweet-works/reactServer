@@ -2,7 +2,7 @@
  * @Autor: yaojie
  * @Date: 2020-08-13 14:47:01
  * @LastEditors: yaojie
- * @LastEditTime: 2020-08-14 16:54:39
+ * @LastEditTime: 2020-08-14 17:55:40
  * @Description: pu
  */
 const path = require('path');
@@ -43,7 +43,9 @@ const config = {
         ]
     },
     plugins: [
-        new HTMLPlugin()
+        new HTMLPlugin({
+            template: path.join(__dirname, '../views/template.html')
+        })
     ]
 }
 module.exports = config;
