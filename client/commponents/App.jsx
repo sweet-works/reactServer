@@ -4,7 +4,7 @@ class App extends Component {
     render() {
         return (
             <div>
-                This is webpack app
+                This is webpack app！123345345
             </div>
         )
     }
