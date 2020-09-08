@@ -2,12 +2,15 @@
  * @Autor: yaojie
  * @Date: 2020-08-13 14:47:01
  * @LastEditors: yaojie
- * @LastEditTime: 2020-08-14 17:24:42
+ * @LastEditTime: 2020-09-08 17:21:42
  * @Description: pu
  */
 const path = require('path');
+const webpack = require('webpack');
+const isDev = process.env.NODE_ENV === 'development';
 const config = {
     target: 'node',
+    mode: 'development',
     entry: {
         app: path.join(__dirname, '../client/server-app.js')
     },
@@ -25,18 +28,7 @@ const config = {
                 loader: 'babel-loader'
             }
         ]
-    },
-     resolve: {
-        extensions: [
-            '.js',
-            '.jsx',
-            '.png',
-            '.gif',
-            '.jpg',
-            '.ico',
-            '.scss',
-            '.css'
-        ]
     }
 }
+
 module.exports = config;

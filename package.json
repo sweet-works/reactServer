@@ -11,7 +11,8 @@
     "express": " node server/express",
     "koa": " node server/koa",
     "start": "npm run build && npm run express",
-    "devs": "cross-env NODE_ENV=development webpack-dev-server --config webpack/webpack.dev.js"
+    "dev": "cross-env NODE_ENV=development webpack-dev-server --config webpack/webpack.dev.js",
+    "devs": "cross-env NODE_ENV=development nodemon server/express"
   },
   "repository": {
     "type": "git",
@@ -32,13 +33,16 @@
     "babel-preset-react": "^6.24.1",
     "cross-env": "^7.0.2",
     "html-webpack-plugin": "^4.3.0",
+    "http-proxy-middleware": "^1.0.5",
     "koa-router": "^9.4.0",
+    "memory-fs": "^0.5.0",
     "react-hot-loader": "^4.5.3",
     "webpack": "^4.44.1",
     "webpack-cli": "^3.3.12",
     "webpack-dev-server": "^3.11.0"
   },
   "dependencies": {
+    "axios": "^0.20.0",
     "express": "^4.17.1",
     "koa": "^2.13.0",
     "koa-static": "^5.0.0",
